@@ -195,7 +195,7 @@ def pregunta_06():
     gridSearchCV = pregunta_04()
 
     # Cargue los datos generados en la pregunta 01.
-    x_tagged, y_tagged, X_untagged, y_untagged = pregunta_01()
+    x_tagged, y_tagged, x_untagged, y_untagged = pregunta_01()
 
     # pronostique la polaridad del sentimiento para los datos
     # no etiquetados
