@@ -113,13 +113,13 @@ def pregunta_04():
     # inferior de 5 palabras. Solo deben analizarse palabras conformadas por
     # letras.
     countVectorizer = CountVectorizer(
-        analyzer=analyzer, #'word'
+        analyzer=analyzer,
         lowercase=True,
         stop_words='english',
         token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
         binary=False,
         max_df=1.0,
-        min_df=30,
+        min_df=5,
         )
 
     # Cree un pipeline que contenga el CountVectorizer y el modelo de BernoulliNB.
@@ -153,7 +153,6 @@ def pregunta_04():
 
     # Retorne el mejor modelo
     return gridSearchCV
-
 
 def pregunta_05():
     """
