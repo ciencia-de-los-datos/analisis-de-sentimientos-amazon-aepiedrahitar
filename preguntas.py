@@ -170,12 +170,12 @@ def pregunta_05():
     x_train, x_test, y_train, y_test = pregunta_02()
 
     # Evalúe el pipeline con los datos de entrenamiento usando la matriz de confusion.
-    cm_train=confusion_matrix(
+    cfm_train=confusion_matrix(
         y_true=y_train,
         y_pred=gridSearchCV.predict(x_train),
     )
     
-    cm_test=confusion_matrix(
+    cfm_test=confusion_matrix(
         y_true=y_test,
         y_pred=gridSearchCV.predict(x_test),
     
